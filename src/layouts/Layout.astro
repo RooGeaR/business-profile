@@ -28,11 +28,21 @@ const { title, description } = Astro.props;
 </html>
 <style is:global>
 	:root {
-
+		--color-primary: #f4dbd8;
+		--color-primary-1: rgba(244, 219, 216, 0.8);
+		--color-secondary: #bea8a7;
+		--color-icon: #c09891;
+		--color-accent-light: #775144;
+		--color-accent-dark: #2a0800;
 	}
 	html {
 		background-color: white;
 		font-family: "Onest Variable", system-ui, sans-serif;
+		scrollbar-gutter: stable;
+	}
+
+	main {
+		position: relative;
 	}
 
 	body {
