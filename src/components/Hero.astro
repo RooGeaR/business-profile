@@ -1,17 +1,21 @@
 ---
 import Badge from "./Badge.astro"
 ---
-<div class="flex flex-col items-center justify-center gap-3 lg">
-  <Badge>
-    Revisión de proyectos &middot; Asesorías &middot; Coaching
-  </Badge>
-  <h3 class="text-2xl text-center">
-    Te apoyamos para que tengas
-  </h3>
-  <h1 class="text-4xl lg:text-6xl md:text-5xl text-center bg-gradient-to-r from-accent-light via-secondary to-icon text-transparent bg-clip-text">
-    Éxito académico y desarrollo profesional
-  </h2>
-  <div class="w-full md:w-1/2">
-    <img src="https://images.pexels.com/photos/5553078/pexels-photo-5553078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hero photo" class="object-cover object-top w-full h-56 sm:h-full md:scale-105 rounded-xl"/>
+<div class="flex flex-col items-center justify-center gap-3 lg:flex-row lg:justify-between">
+  <div class="flex flex-col items-center justify-center gap-3">
+    <Badge>
+      Revisión de proyectos &middot; Asesorías &middot; Coaching
+    </Badge>
+    <h3 class="text-2xl text-center">
+      Te apoyamos para que tengas
+    </h3>
+    <h1 class="text-4xl lg:text-6xl md:text-5xl text-center bg-gradient-to-r from-accent-light via-secondary to-icon text-transparent bg-clip-text">
+      Éxito académico y desarrollo profesional
+    </h2>
+  </div>
+  <div class="flex flex-col items-center justify-center">
+    <div class="w-full">
+      <img src="https://images.pexels.com/photos/5553078/pexels-photo-5553078.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="hero photo" class="object-cover object-top w-full h-56 sm:h-full md:scale-105 rounded-xl"/>
+    </div>
   </div>
 </div>
