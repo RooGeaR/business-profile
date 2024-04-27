@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
 ---
 
 <Layout title="Business Profile" description='Bienvenido a mi página de Servicios Académicos y Tecnología Educativa'>
@@ -10,8 +11,9 @@ import Hero from '../components/Hero.astro';
 		<SectionContainer class="py-24 md:py-36">
 			<Hero />
 		</SectionContainer>
-		<SectionContainer class="py-16 md:py-36">
-			<Hero />
+		<SectionContainer id="about" class="py-6 md:py-30">
+			<h2 class="flex justify-center items-center mb-6 text-3xl font-semibold text-accent-light">¿Quiénes somos?</h2>
+			<About />
 		</SectionContainer>
 	</main>
 </Layout>
