@@ -1,4 +1,5 @@
 ---
+import Hamburguer from "./icons/Hamburguer.astro"
 const navItems = [
   {
     title: "Quiénes somos",
@@ -18,23 +19,41 @@ const navItems = [
 ]
 ---
 
-<header class="fixed top-0 z-10 bg-primary flex justify-between items-center py-3 px-6 w-full mx-auto lg:px-60 md:px-40">
-  <img src="https://images.pexels.com/photos/4498093/pexels-photo-4498093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Business profile" class="rounded-full w-12 h-12">
-  <nav class="flex px-3 flex-row opacity-80 text-sm font-medium text-black-500 gap-3">
-    {
-      navItems.map((link) => (
-        <a
-          class="relative block transition hover:text-accent-light"
-          href={link.url}
-          aria-label={link.label}
-        >
-          {link.title}
-        </a>
-      ))
-    }
+<header class="fixed top-0 z-10 bg-primary py-3 px-6 w-full mx-auto lg:px-60 md:px-40">
+  <nav class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4 opacity-80 text-sm font-medium text-black-500">
+    <a href="https://myurl.com" class="flex items-center space-x-3 rtl:space-x-reverse">
+      <img src="https://images.pexels.com/photos/4498093/pexels-photo-4498093.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Business profile" class="rounded-full w-12 h-12">
+    </a>
+    <button id="btn-menu-items" data-collapse-toggle="menu-items" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-accent-dark rounded-lg md:hidden hover:bg-accent-light focus:outline-none focus:ring-2 focus:ring-accent-light" aria-controls="menu-items" aria-expanded="false">
+      <span class="sr-only">Abrir menú principal</span>
+      <Hamburguer />
+    </button>
+    <div id="menu-items" class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+      <ul class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+      {
+        navItems.map((link) => (
+          <li>
+            <a
+              class="relative block py-2 px-3 transition hover:text-accent-light md:p-0"
+              href={link.url}
+              aria-label={link.label}
+            >
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
+      </ul>
+    </div>
+    
   </nav>
 </header>
 
+<script>
+  document?.querySelector('#btn-menu-items')?.addEventListener('click', () => {
+    document?.querySelector('#menu-items')?.classList.toggle('hidden');
+  });
+</script>
 <style>
   header {
     animation: nav-shadow 1s linear both;
