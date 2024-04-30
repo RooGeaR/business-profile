@@ -1,0 +1,14 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import AboutPage from '../components/About.astro';
+---
+
+<Layout title="Nosotros somos - [Nombre empresa]" description='Nosotros somos una página de Servicios Académicos y Tecnología Educativa'>
+	<main class="px-4">
+		<SectionContainer id="about" class="py-24 md:py-36">
+			<h2 class="flex justify-center items-center mb-6 text-3xl font-semibold text-accent-light">¿Quiénes somos?</h2>
+			<AboutPage />
+		</SectionContainer>
+	</main>
+</Layout>
