@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Nosotros somos - [Nombre empresa]" description='Nosotros somos una página de Servicios Académicos y Tecnología Educativa'>
+	<main class="px-4">
+		<SectionContainer id="about" class="py-32 md:py-36">
+			<h2 class="flex justify-center items-center mb-6 text-3xl font-semibold text-accent-light">Servicios</h2>
+			<div class="grid grid-cols-1 content-around justify-between md:grid-cols-2">
+				<Card title='Noteworthy technology acquisitions 2021' body='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'/>
+				<Card title='Noteworthy technology acquisitions 2021' body='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'/>
+				<Card title='Noteworthy technology acquisitions 2021' body='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'/>
+				<Card title='Noteworthy technology acquisitions 2021' body='Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.'/>
+			</div>
+		</SectionContainer>
+	</main>
+</Layout>
