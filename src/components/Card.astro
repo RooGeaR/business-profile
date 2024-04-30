@@ -7,12 +7,12 @@ interface Props {
 const { title, body } = Astro.props;
 ---
 
-<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow">
 	<img class="rounded-t-lg" src="https://images.pexels.com/photos/22710826/pexels-photo-22710826/free-photo-of-faith-hope-and-love-a-book-of-hope.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" />
 	<div class="p-5">
-			<a href="#">
-					<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
-			</a>
-			<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{body}</p>
+		<a href="#">
+			<h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{title}</h5>
+		</a>
+		<p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{body}</p>
 	</div>
 </div>
